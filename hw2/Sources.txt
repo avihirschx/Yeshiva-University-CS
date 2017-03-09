@@ -1,0 +1,2 @@
+Some of the code found in the video at https://youtu.be/XjXMP1zUWQ0 was utilized in the writing of my code.
+I also referenced this site for help with writing to a file: https://www.mkyong.com/java/how-to-write-to-file-in-java-bufferedwriter-example/
