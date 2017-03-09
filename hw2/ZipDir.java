@@ -35,12 +35,12 @@ public class ZipDir
 
 		if (zipProgram.getType().equals("zip")) {
 			//Zip the files into a zip file.
-			zipProgram.zip(zipProgram.getOutDir().concat("\\" + "new.zip"));
+			zipProgram.zip(zipProgram.getOutDir().concat("\\" + "out.zip"));
 			zipProgram.printReport();	//Print the report.
 		}
 		else if (zipProgram.getType().equals("jar")) {
 			//Zip the files into a jar file.
-			zipProgram.zip(zipProgram.getOutDir().concat("\\" + "new.jar"));
+			zipProgram.zip(zipProgram.getOutDir().concat("\\" + "out.jar"));
 			zipProgram.printReport();	//Print the report.
 		}
 		else {
