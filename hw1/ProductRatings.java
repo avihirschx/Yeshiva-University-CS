@@ -1,5 +1,6 @@
 public class ProductRatings
 {
+	//JD: it is best to include comments on each of yor instance variables below so someone else knows imediately what they are for
 	private int numberOfProducts;
 	private int numberOfPossibleRatings;
 	private int[][] ratingCount;
@@ -34,9 +35,11 @@ public class ProductRatings
 		//Add this rating and update counter.
 		this.ratings[productID][rating - 1] += 1;
 		this.counter[productID]++;
+		//JD: very good - mod is the right way to do this
 		this.ratingCount[productID][this.counter[productID] % 20] = rating;
 
 		//Check if the highest rating is most common over last 20 ratings.
+		//JD: not hard-coding 5 - nice touch!
 		if (this.getMostCommonRating20(productID) == numberOfPossibleRatings) {
 			if (!this.isStar[productID]) {
 				this.starCounter[productID] = 20;
@@ -118,9 +121,10 @@ public class ProductRatings
 		}
 		return ratingInfo;
 	}
-
+	
 	public void resetProduct(int productID)
 	{
+		//JD: see java.utils.Arrays.fill - save yourself some code
 		for (int i = 0; i < this.numberOfPossibleRatings; i++) {
 			this.ratings[productID][i] = 0;
 		}
