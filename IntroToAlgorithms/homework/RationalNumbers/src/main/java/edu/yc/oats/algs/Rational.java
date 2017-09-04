@@ -5,7 +5,7 @@ public class Rational {
 	private long numerator;
 	private long denominator;
 
-	public Rational(int numerator, int denominator){
+	public Rational(long numerator, long denominator){
 
 		//Denominator can't be 0.
 		if (denominator == 0) {
@@ -14,7 +14,7 @@ public class Rational {
 
 		//Reduce by dividing numerator and denominator
 		//by the greatest common divisor
-		int gcd = gcd(numerator, denominator);
+		long gcd = gcd(numerator, denominator);
 		numerator /= gcd;
 		denominator /= gcd;
 
@@ -34,10 +34,10 @@ public class Rational {
 
 	//Euclid's algorithm to get gcd
 	//of numerator and denominator.
-	private int gcd(int n, int d) {
+	private long gcd(long n, long d) {
 		if (d == 0)
 			return n;
-		int r = n % d;
+		long r = n % d;
 		return gcd(d, r);
 	}
 
@@ -47,7 +47,7 @@ public class Rational {
 		//Calculate the new numerator.
 		long newNum = this.numerator() * b.denominator() + b.numerator() * this.denominator();
 		//Return result as a reduced rational number.
-		return new Rational((int)newNum, (int)newDen);
+		return new Rational(newNum, newDen);
 	}
 
 	public Rational minus(Rational b) {
@@ -56,7 +56,7 @@ public class Rational {
 		//Calculate the new numerator.
 		long newNum = this.numerator() * b.denominator() - b.numerator() * this.denominator();
 		//Return result as a reduced rational number.
-		return new Rational((int)newNum, (int)newDen);
+		return new Rational(newNum, newDen);
 	}
 
 	public Rational times(Rational b) {
@@ -64,7 +64,7 @@ public class Rational {
 		long newNum = this.numerator() * b.numerator();
 		long newDen = this.denominator() * b.denominator();
 		//Return result as a reduced rational number.
-		return new Rational((int)newNum, (int)newDen);
+		return new Rational(newNum, newDen);
 	}
 
 	public Rational divides(Rational b) {
@@ -74,7 +74,7 @@ public class Rational {
 		}
 
 		//Store b's reciprocal as "temp"
-		Rational temp = new Rational((int)b.denominator(), (int)b.numerator());
+		Rational temp = new Rational(b.denominator(), b.numerator());
 
 		//Return product of this and temp.
 		return this.times(temp);
@@ -100,13 +100,13 @@ public class Rational {
 			}
 			//If the number is whole,
 			if (this.denominator() == 1) {
-				return Integer.toString((int)this.numerator());
+				return Long.toString(this.numerator());
 			}
 			//Return the fraction as a string.
-			return Integer.toString((int)this.numerator()) + "/" + Integer.toString((int)this.denominator());
+			return Long.toString(this.numerator()) + "/" + Long.toString(this.denominator());
 		}
 		
 		//If denominator is negative, move "-" to beginning.
-		return "-" + Integer.toString((int)this.numerator()) + "/" + Integer.toString((int)this.denominator()).substring(1);
+		return "-" + Long.toString(this.numerator()) + "/" + Long.toString(this.denominator()).substring(1);
 	}
 }
