@@ -37,14 +37,6 @@ public class Rational {
 		return gcd(d, r);
 	}
 
-	//A method to reduce a Rational object.
-	// private Rational reduce(Rational number) {
-	// 	int gcd = gcd(numerator, denominator);
-	// 	numerator /= gcd;
-	// 	denominator /= gcd;
-	// 	return Rational;
-	// }
-
 	public Rational plus(Rational b) {
 		//Find a common denominator.
 		long newDen = this.denominator() * b.denominator();
