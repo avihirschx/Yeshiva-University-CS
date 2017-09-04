@@ -5,7 +5,7 @@ public class Rational {
 	private long numerator;
 	private long denominator;
 
-	public Rational(int numerator, int denominator) {
+	public Rational(int numerator, int denominator){
 
 		//Denominator can't be 0.
 		if (denominator == 0) {
@@ -18,9 +18,11 @@ public class Rational {
 		numerator /= gcd;
 		denominator /= gcd;
 
+		//Set the instance variables.
 		this.numerator = numerator;
 		this.denominator = denominator;
 	}
+
 	//Getter for denominator
 	public long denominator() {
 		return this.denominator;
@@ -30,6 +32,8 @@ public class Rational {
 		return this.numerator;
 	}
 
+	//Euclid's algorithm to get gcd
+	//of numerator and denominator.
 	private int gcd(int n, int d) {
 		if (d == 0)
 			return n;
@@ -42,6 +46,7 @@ public class Rational {
 		long newDen = this.denominator() * b.denominator();
 		//Calculate the new numerator.
 		long newNum = this.numerator() * b.denominator() + b.numerator() * this.denominator();
+		//Return result as a reduced rational number.
 		return new Rational((int)newNum, (int)newDen);
 	}
 
@@ -50,6 +55,7 @@ public class Rational {
 		long newDen = this.denominator() * b.denominator();
 		//Calculate the new numerator.
 		long newNum = this.numerator() * b.denominator() - b.numerator() * this.denominator();
+		//Return result as a reduced rational number.
 		return new Rational((int)newNum, (int)newDen);
 	}
 
@@ -57,6 +63,7 @@ public class Rational {
 		//Multiply the numerators and denominators.
 		long newNum = this.numerator() * b.numerator();
 		long newDen = this.denominator() * b.denominator();
+		//Return result as a reduced rational number.
 		return new Rational((int)newNum, (int)newDen);
 	}
 
@@ -65,17 +72,21 @@ public class Rational {
 		if (b.numerator() == 0) {
 			throw new IllegalArgumentException("Cannot divide by 0.");
 		}
-		//Multiply by reciprocal.
+
+		//Store b's reciprocal as "temp"
 		Rational temp = new Rational((int)b.denominator(), (int)b.numerator());
+
+		//Return product of this and temp.
 		return this.times(temp);
 	}
 
 	public boolean equals(Rational that) {
 		//If the numerator and denominator are equal,
-		//the rational numbers are equal.
+		//then the rational numbers are equal.
 		if (this.numerator() == that.numerator() && this.denominator() == that.denominator()) {
 			return true;
 		}
+		//Otherwise, they're not equal.
 		return false;
 	}
 
@@ -97,6 +108,5 @@ public class Rational {
 		
 		//If denominator is negative, move "-" to beginning.
 		return "-" + Integer.toString((int)this.numerator()) + "/" + Integer.toString((int)this.denominator()).substring(1);
-
 	}
 }
