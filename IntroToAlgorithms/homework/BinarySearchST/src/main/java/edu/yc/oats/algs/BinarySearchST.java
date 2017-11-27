@@ -8,7 +8,6 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>
 	private Value[] vals;
 	private int N;
 
-
 	public BinarySearchST() {
 		this(50);	//Initialize empty bsst with capacity of 50.
 	}
@@ -24,11 +23,11 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>
 	 * .... (initialKeys[N-1], initialValues[N-1])
 	 */
 	public BinarySearchST(Key[] initialKeys, Value[] initialValues) {
+
+		this();
+
 		if (initialKeys.length != initialValues.length)
 			throw new IllegalArgumentException("Number of keys and values must be the same.");
-
-		keys = (Key[]) new Comparable[initialKeys.length];
-		vals = (Value[]) new Object[initialValues.length];
 
 		int i = 0;
 
