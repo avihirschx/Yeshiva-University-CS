@@ -100,7 +100,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>
 		int i = rank(key);
 
 		if (i != N && keys[i].compareTo(key) == 0) {	//We found the right key
-			for (int j = i; j < N - 1; j++)  {			//Delete implementation
+			for (int j = i; j < N - 1; j++) {			//Delete implementation
 				keys[j] = keys[j + 1];
 				vals[j] = vals[j + 1];
 			}
@@ -138,7 +138,10 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>
 
 		int i = rank(key);
 
-		return keys[i];
+		if (i == N)									//key is too high
+			return null;
+
+		return keys[i];								//return key equal or higher
 	}
 
 	public Key floor(Key key) {
@@ -147,13 +150,13 @@ public class BinarySearchST<Key extends Comparable<Key>, Value>
 
 		int i = rank(key);
 
-		if (i < N && key.compareTo(keys[i]) == 0)
+		if (i < N && key.compareTo(keys[i]) == 0)	//key is in symbol table
 			return keys[i];
 
-		if (i == 0)
+		if (i == 0)									//key is too low
 			return null;
-		else
-			return keys[i - 1];
+
+		return keys[i - 1];							//return lower key
 	}
 
 	public Iterable<Key> keys(Key lo, Key hi) {
