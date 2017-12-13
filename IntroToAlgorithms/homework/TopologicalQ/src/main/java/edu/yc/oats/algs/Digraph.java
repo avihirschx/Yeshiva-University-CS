@@ -1,6 +1,7 @@
 package edu.yc.oats.algs;
 
 import java.util.NoSuchElementException;
+import java.util.Stack;
 
 /**
  *  The {@code Digraph} class represents a directed graph of vertices
@@ -215,15 +216,15 @@ public class Digraph {
 		return s.toString();
 	}
 
-	// /**
-	//  * Unit tests the {@code Digraph} data type.
-	//  *
-	//  * @param args the command-line arguments
-	//  */
-	// public static void main(String[] args) {
-	// 	In in = new In(args[0]);
-	// 	Digraph G = new Digraph(in);
-	// 	StdOut.println(G);
-	// }
+	/**
+	 * Unit tests the {@code Digraph} data type.
+	 *
+	 * @param args the command-line arguments
+	 */
+	public static void main(String[] args) {
+		In in = new In(args[0]);
+		Digraph G = new Digraph(in);
+		StdOut.println(G);
+	}
 
 }
