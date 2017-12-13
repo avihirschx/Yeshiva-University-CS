@@ -29,6 +29,8 @@ public class TopologicalQ {
 			//remove a source and add it to topological order.
 			int source = sources.dequeue();
 			order.enqueue(source);
+
+			//update count of vertices in order.
 			c++;
 
 			//for every vertex adjacent to the source, decrement its indegrees. add to sources if it hits 0.
@@ -39,6 +41,9 @@ public class TopologicalQ {
 			}
 
 		}
+
+		//If there's a cycle, number of vertices in order
+		//won't equal total number of vertices in graph.
 		if (c != vertices) {
 			order = null;
 		}
