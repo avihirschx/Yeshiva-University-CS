@@ -117,7 +117,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 	public Iterator<Integer> iterator() {
 		return new HIterator();
 	}
-	
+
 	private class HIterator implements Iterator<Integer>
 	{
 		private IndexMinPQ<Key> queue;
@@ -128,7 +128,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 				queue.insert(pq[i], keys[pq[i]]);
 		}
 		public boolean hasNext() {
-			return !queue.isEmpty;
+			return !queue.isEmpty();
 		}
 		public Integer next() {
 			if (!hasNext())
