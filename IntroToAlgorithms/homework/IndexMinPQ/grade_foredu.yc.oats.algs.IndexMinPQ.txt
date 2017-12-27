@@ -1,0 +1,130 @@
+0/10: doesn't compile against test code.
+
+=== 2nd (actually 3rd take)
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building IndexPQ 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ IndexPQ ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/2545/IndexMinPQ/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ IndexPQ ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /Users/avraham/class_code/2545/IndexMinPQ/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/target/classes
+[WARNING] /Users/avraham/class_code/2545/IndexMinPQ/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[21,32] unchecked cast
+  required: Key[]
+  found:    java.lang.Comparable[]
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ IndexPQ ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/2545/IndexMinPQ/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ IndexPQ ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to /Users/avraham/class_code/2545/IndexMinPQ/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/avraham/class_code/2545/IndexMinPQ/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/test/java/edu/yc/oats/algs/test/IndexMinPQTest.java:[48,18] IndexMinPQ(int) is not public in edu.yc.oats.algs.IndexMinPQ; cannot be accessed from outside package
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.321 s
+[INFO] Finished at: 2017-12-27T12:36:23-05:00
+[INFO] Final Memory: 14M/210M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project IndexPQ: Compilation failure
+[ERROR] /Users/avraham/class_code/2545/IndexMinPQ/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/test/java/edu/yc/oats/algs/test/IndexMinPQTest.java:[48,18] IndexMinPQ(int) is not public in edu.yc.oats.algs.IndexMinPQ; cannot be accessed from outside package
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+
+=== first take 
+
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building IndexPQ 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ IndexPQ ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ IndexPQ ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[19,32] unchecked cast
+  required: Key[]
+  found:    java.lang.Comparable[]
+[INFO] 1 warning
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[105,27] cannot find symbol
+  symbol:   class ink
+  location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[3,8] edu.yc.oats.algs.IndexMinPQ is not abstract and does not override abstract method iterator() in java.lang.Iterable
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[52,35] cannot find symbol
+  symbol:   class NoSuchElementException
+  location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[57,35] cannot find symbol
+  symbol:   class NoSuchElementException
+  location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[66,17] cannot find symbol
+  symbol:   variable N
+  location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[74,35] cannot find symbol
+  symbol:   class NoSuchElementException
+  location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.899 s
+[INFO] Finished at: 2017-12-26T20:09:42-05:00
+[INFO] Final Memory: 15M/309M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project IndexPQ: Compilation failure: Compilation failure:
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[105,27] cannot find symbol
+[ERROR] symbol:   class ink
+[ERROR] location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[3,8] edu.yc.oats.algs.IndexMinPQ is not abstract and does not override abstract method iterator() in java.lang.Iterable
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[52,35] cannot find symbol
+[ERROR] symbol:   class NoSuchElementException
+[ERROR] location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[57,35] cannot find symbol
+[ERROR] symbol:   class NoSuchElementException
+[ERROR] location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[66,17] cannot find symbol
+[ERROR] symbol:   variable N
+[ERROR] location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] /Users/avraham/class_code/2545/2017-12-2711468/AviHirsch/IntroToAlgorithms/homework/IndexMinPQ/src/main/java/edu/yc/oats/algs/IndexMinPQ.java:[74,35] cannot find symbol
+[ERROR] symbol:   class NoSuchElementException
+[ERROR] location: class edu.yc.oats.algs.IndexMinPQ<Key>
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
