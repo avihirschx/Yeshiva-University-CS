@@ -1,0 +1,72 @@
+10/10
+
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building TopologicalQ 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ TopologicalQ ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/2545/2017-12-1314699/AviHirsch/IntroToAlgorithms/homework/TopologicalQ/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ TopologicalQ ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to /Users/avraham/class_code/2545/2017-12-1314699/AviHirsch/IntroToAlgorithms/homework/TopologicalQ/target/classes
+[WARNING] /Users/avraham/class_code/2545/2017-12-1314699/AviHirsch/IntroToAlgorithms/homework/TopologicalQ/src/main/java/edu/yc/oats/algs/Digraph.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/avraham/class_code/2545/2017-12-1314699/AviHirsch/IntroToAlgorithms/homework/TopologicalQ/src/main/java/edu/yc/oats/algs/Digraph.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ TopologicalQ ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/avraham/class_code/2545/2017-12-1314699/AviHirsch/IntroToAlgorithms/homework/TopologicalQ/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ TopologicalQ ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to /Users/avraham/class_code/2545/2017-12-1314699/AviHirsch/IntroToAlgorithms/homework/TopologicalQ/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ TopologicalQ ---
+[INFO] Surefire report directory: /Users/avraham/class_code/2545/2017-12-1314699/AviHirsch/IntroToAlgorithms/homework/TopologicalQ/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running edu.yc.oats.algs.TopologicalQTest
+# Edges=8
+# Vertices=7
+The graph: 7 vertices, 8 edges 
+0: 2 1 
+1: 3 5 4 
+2: 3 
+3: 4 
+4: 6 
+5: 
+6: 
+
+Printing a topological order
+0 2 1 3 5 4 6 
+# Edges=9
+# Vertices=6
+The graph: 6 vertices, 9 edges 
+0: 5 1 
+1: 
+2: 3 0 
+3: 5 2 
+4: 3 2 
+5: 4 
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.731 s
+[INFO] Finished at: 2017-12-13T08:42:06-05:00
+[INFO] Final Memory: 17M/301M
+[INFO] ------------------------------------------------------------------------
