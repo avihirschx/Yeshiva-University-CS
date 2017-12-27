@@ -11,7 +11,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 	private int[] qp;	//inverse (qp[pq[i]] = pq[qp[i]] = i)
 	private Key[] keys;	//array of priorities of items
 
-	IndexMinPQ(int maxN) {
+	public IndexMinPQ(int maxN) {
 		if (maxN < 0)
 			throw new IllegalArgumentException();
 
