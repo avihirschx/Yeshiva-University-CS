@@ -1,7 +1,6 @@
 package edu.yc.oats.algs;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer>
 {
