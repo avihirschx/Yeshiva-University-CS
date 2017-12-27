@@ -49,12 +49,12 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 
 	public int minIndex() {
 		if (n == 0)
-			throw new NoSuchElementException("underflow");
+			throw new NoSuchElementException();
 		return pq[1];
 	}
 	public Key minKey() {
 		if (n == 0)
-			throw new NoSuchElementException("underflow");
+			throw new NoSuchElementException();
 		return keys[pq[1]];
 	}
 
@@ -63,15 +63,18 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 			throw new IllegalArgumentException();
 		if (contains(i))
 			throw new IllegalArgumentException("Index already present.");
+
 		N++;
 		qp[i] = n;
 		pq[n] = i;
 		keys[i] = key;
 		swim(n);
 	}
+
 	public int delMin() {
 		if (n == 0)
-			throw new NoSuchElementException("underflow");
+			throw new NoSuchElementException();
+
 		int m = pq[1];
 		exch(1, n--);
 		sink (1);
@@ -81,11 +84,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 	}
 
 
-
-
-
-
-
+	//helper methods
 	private boolean greater(int i, int j) {
 		return keys[pq[i]].compareTo(keys[pq[j]]) > 0;
 	}
@@ -113,4 +112,29 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 			k = j;
 		}
 	}
+
+	//iterator methods
+	public Iterator<Integer> iterator() {
+		return new HIterator();
+	}
+	
+	private class HIterator implements Iterator<Integer>
+	{
+		private IndexMinPQ<Key> queue;
+
+		public HIterator() {
+			queue = new IndexMinPQ<Key>(pq.length - 1);
+			for (int i = 1; i <= n; i++)
+				queue.insert(pq[i], keys[pq[i]]);
+		}
+		public boolean hasNext() {
+			return !queue.isEmpty;
+		}
+		public Integer next() {
+			if (!hasNext())
+				throw new NoSuchElementException();
+			return queue.delMin();
+		}
+	}
+
 }
