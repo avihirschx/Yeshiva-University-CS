@@ -1,5 +1,8 @@
 package edu.yc.oats.algs;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer>
 {
 	private int maxN;	//max num of elements
@@ -64,7 +67,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 		if (contains(i))
 			throw new IllegalArgumentException("Index already present.");
 
-		N++;
+		n++;
 		qp[i] = n;
 		pq[n] = i;
 		keys[i] = key;
@@ -77,7 +80,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 
 		int m = pq[1];
 		exch(1, n--);
-		sink (1);
+		sink(1);
 		qp[m] = -1;
 		keys[m] = null;
 		return m;
@@ -101,7 +104,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
 			k = k/2;
 		}
 	}
-	private void sink(ink k) {
+	private void sink(int k) {
 		while (2 * k <= n) {
 			int j = 2 * k;
 			if (j < n && greater(j, j + 1))
