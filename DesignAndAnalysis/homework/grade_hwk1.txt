@@ -1,0 +1,3 @@
+8/10: I didn't follow your algebraic manipulation in the 2nd question.
+I think you started off doing a "difference of squares" manipulation,
+but ended up doing something else,
