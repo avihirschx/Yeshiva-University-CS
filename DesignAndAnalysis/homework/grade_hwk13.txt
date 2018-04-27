@@ -1,1 +1,4 @@
-hwk #13 [AviHirsch]: /10
+hwk #13 [AviHirsch]: 0/10
+
+Homework not submitted.  (I don't see it on git or hard-copy, I think
+you told me that you missed the deadline)
