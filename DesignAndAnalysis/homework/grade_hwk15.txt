@@ -1,0 +1,8 @@
+hwk #15 [AviHirsch]: 9/10
+
+very good, but -1 because you left out the cost of recovering the dp solution.
+
+btw: you did a better "correctness proof" with the first paragraph
+(defining OPT recurrence) than with the second "more formal
+*sounding*" paragraph
+hwk #15 [AviHirsch]: /10
