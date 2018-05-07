@@ -1,0 +1,4 @@
+hwk #14 [AviHirsch]: 8.5/10
+
+-1.5 on (c): for not justifying poly-time claim and for not explaining
+ how to actually recover the max independent set
