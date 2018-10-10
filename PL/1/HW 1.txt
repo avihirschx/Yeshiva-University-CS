@@ -23,13 +23,19 @@ letter = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" |
 
 EBNF: GALAXY
 
-Galaxy = Name, Hubble_Sequence, Size, Mass, Number_Of_Stars, Distance_From_Earth;
+Galaxy = Name, Hubble_Sequence, Size, Mass, Age, Number_Of_Stars, Distance_From_Earth;
 Name = letter | digit, [letter | digit];
 Form = Elliptical_Form | Spiral_Form | Lenticular_Form;
 Elliptical_Form = "E0" | "E3" | "E5" | "E7";
-Spiral_Form = "";
-Lenticular_Form = "";
+Spiral_Form = "Sa" | "Sb" | "Sc";
+Lenticular_Form = "S0";
 Size = "dwarf" | "giant";
-Mass = 
+Mass = digit, {digit}, [".", {digit}], " x 10^", digit, {digit};
+Age = digit, {digit}, Large_Approximation, [Large_Approximation], Time_Unit;
+Number_Of_Stars = digit, {digit}, Large_Approximation, [Large_Approximation];
+Large_Approximation = "hundred" | "thousand" | "million" | "billion" | "trillion";
+Distance_From_Earth = digit, {digit}, [".", {digit}], [Large_Approximation], Distance_Unit;
+Distance_Unit = "light years" | "megaparsecs";
+Time_Unit = "years";
 digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
 letter = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z";
