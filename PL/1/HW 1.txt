@@ -1,0 +1,35 @@
+EBNF: HOME ADDRESS
+
+Address = Name, Street, City, State, Zip
+
+Name = Name-Part, [letter, "."], NamePart, [Name-Suffix];
+Name-Part = letter, {letter};
+Name-Suffix = "Jr." | "Sr." | Roman-Numeral;
+Roman-Numeral = roman-numeral-part, {roman-numeral-part};
+
+Street = Street-Number, Street-Name;
+Street-Number = digit, [StreetNumber];
+Street-Name = Name-Part, Street-Type;
+Street-Type = "Ave." | "St." | "Ct." | "Blvd." | "Dr.";
+City = Name-Part;
+State = Name-Part, [Name-Part] | letter, ".", letter, ".";
+Zip = 5 * digit, ["-", 4 * digit];
+
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+roman-numeral-part = "I" | "V" | "X" | "L" | "C" | "D" | "M";
+letter = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z";
+
+---
+
+EBNF: GALAXY
+
+Galaxy = Name, Hubble_Sequence, Size, Mass, Number_Of_Stars, Distance_From_Earth;
+Name = letter | digit, [letter | digit];
+Form = Elliptical_Form | Spiral_Form | Lenticular_Form;
+Elliptical_Form = "E0" | "E3" | "E5" | "E7";
+Spiral_Form = "";
+Lenticular_Form = "";
+Size = "dwarf" | "giant";
+Mass = 
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+letter = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z";
